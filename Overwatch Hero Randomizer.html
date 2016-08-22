@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Overwatch Hero Randomizer</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<script>	
+	function randomize() {
+		var offenseHeroes = ["McCree", "Genji", "Soldier 76", "Reaper", "Tracer", "Pharah"];
+		var defenseHeroes = ["Bastion", "Hanzo", "Junkrat", "Mei", "Torbjorn", "Widowmaker"];
+		var tankHeroes = ["D.Va", "Reinhardt", "Roadhog", "Winston", "Zarya"];
+		var supportHeroes = ["Ana", "Lucio", "Mercy", "Symmetra", "Zenyatta"];
+	
+		var offense = document.getElementById("offense").checked;
+		var defense = document.getElementById("defense").checked;
+		var tank = document.getElementById("tank").checked;
+		var support = document.getElementById("support").checked;
+		var heroOptions = [];
+		var limit;
+		var index;
+		var yourHero;
+		
+		if (offense == true || defense == true || tank == true || support == true) {
+			//builds the array of all possible characters to randomize
+			if (offense == true) {
+				heroOptions.concat(offenseHeroes);
+			}
+			if (defense == true) {
+				heroOptions.concat(defenseHeroes);
+			}
+			if (tank == true) {
+				heroOptions.concat(tankHeroes);
+			}
+			if (support == true) {
+				heroOptions.concat(supportHeroes);
+			}
+			
+			limit = heroOptions.length;
+			index = Math.floor(Math.random() * limit);
+			yourHero = heroOptions[index];
+			document.getElementById("hero").innerHTML = yourHero;
+			
+		} else {
+			alert("You must select at least one role!");
+		}
+	}//function ends
+	
+  </script>
+  
+  </head>
+  <body style="background-color:lightgrey">
+  
+  <div class="container-fluid">
+    <h1>Overwatch Hero Randomizer</h1>
+	<div class="row">
+	  
+	  <div class="col-sm-4">
+	    <form name="roleSelect">
+		 <h4> Select the role(s) you would like to play:</h4> <br>
+		  <input type="checkbox" name="offense" id="offense"> Offense 
+		  <img src="https://hydra-media.cursecdn.com/overwatch.gamepedia.com/1/14/OffenseIcon.png" alt="offense" height="40" width="40"> <br>
+		  <input type="checkbox" name="defense" id="defense"> Defense
+		  <img src="https://hydra-media.cursecdn.com/overwatch.gamepedia.com/6/61/DefenseIcon.png" alt="defense" height="40" width="40"> <br>
+		  <input type="checkbox" name="tank" id="tank"> Tank
+		  <img src="https://hydra-media.cursecdn.com/overwatch.gamepedia.com/6/69/TankIcon.png" alt="tank" height="40" width="40"> <br>
+		  <input type="checkbox" name="support" id="support"> Support
+		  <img src="https://hydra-media.cursecdn.com/overwatch.gamepedia.com/5/5f/SupportIcon.png" alt="support" height="40" width="40"> <br>
+		  <button onclick="randomize()">Randomize!</button>
+		</form>  
+	  </div>
+	 
+	 <div class="col-sm-8">
+	  <h4>You should play:</h4> <br>
+	  <h4 id="hero"> </h4> <br>
+	  <img name="pic" src="http://media-overpwn.cursecdn.com/attachments/1/774/000000007052.png" alt="overwatch" height="400" width="400">
+	 </div>
+	</div>
+  </div>  
+  </body>
+</html>
