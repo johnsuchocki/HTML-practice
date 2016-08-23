@@ -3,6 +3,14 @@ body {
 	background-color: lightgrey;
 }
 
+.footer {
+	font-family: 'Play', sans-serif;
+	font-size: 12px;
+	position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
 .role-selector {
 	font-size: 18px;
 	padding-left: 50px;
