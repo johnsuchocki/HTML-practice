@@ -27,16 +27,16 @@
 		if (offense == true || defense == true || tank == true || support == true) {
 			//builds the array of all possible characters to randomize
 			if (offense == true) {
-				heroOptions.concat(offenseHeroes);
+				heroOptions = heroOptions.concat(offenseHeroes);
 			}
 			if (defense == true) {
-				heroOptions.concat(defenseHeroes);
+				heroOptions = heroOptions.concat(defenseHeroes);
 			}
 			if (tank == true) {
-				heroOptions.concat(tankHeroes);
+				heroOptions = heroOptions.concat(tankHeroes);
 			}
 			if (support == true) {
-				heroOptions.concat(supportHeroes);
+				heroOptions = heroOptions.concat(supportHeroes);
 			}
 			
 			limit = heroOptions.length;
@@ -59,7 +59,6 @@
 	<div class="row">
 	  
 	  <div class="col-sm-4">
-	    <form name="roleSelect">
 		 <h4> Select the role(s) you would like to play:</h4> <br>
 		  <input type="checkbox" name="offense" id="offense"> Offense 
 		  <img src="https://hydra-media.cursecdn.com/overwatch.gamepedia.com/1/14/OffenseIcon.png" alt="offense" height="40" width="40"> <br>
@@ -69,8 +68,7 @@
 		  <img src="https://hydra-media.cursecdn.com/overwatch.gamepedia.com/6/69/TankIcon.png" alt="tank" height="40" width="40"> <br>
 		  <input type="checkbox" name="support" id="support"> Support
 		  <img src="https://hydra-media.cursecdn.com/overwatch.gamepedia.com/5/5f/SupportIcon.png" alt="support" height="40" width="40"> <br>
-		  <button onclick="randomize()">Randomize!</button>
-		</form>  
+		  <button onclick="randomize()">Randomize!</button> 
 	  </div>
 	 
 	 <div class="col-sm-8">
