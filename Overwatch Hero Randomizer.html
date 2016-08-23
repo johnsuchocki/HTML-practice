@@ -1,10 +1,11 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
   <head>
     <title>Overwatch Hero Randomizer</title>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	
@@ -44,6 +45,77 @@
 			yourHero = heroOptions[index];
 			document.getElementById("hero").innerHTML = yourHero;
 			
+			switch (yourHero) {
+				case "McCree":
+					document.getElementById("heroPic").src = "https://blzgdapipro-a.akamaihd.net/game/heroes/0x02E0000000000042.png";
+					break;
+				case "Genji":
+					document.getElementById("heroPic").src = "https://blzgdapipro-a.akamaihd.net/game/heroes/0x02E0000000000029.png";
+					break;
+				case "Soldier 76":
+					document.getElementById("heroPic").src = "https://blzgdapipro-a.akamaihd.net/game/heroes/0x02E000000000006E.png";
+					break;
+				case "Reaper":
+					document.getElementById("heroPic").src = "https://blzgdapipro-a.akamaihd.net/game/heroes/0x02E0000000000002.png";
+					break;
+				case "Tracer":
+					document.getElementById("heroPic").src = "https://blzgdapipro-a.akamaihd.net/game/heroes/0x02E0000000000003.png";
+					break;
+				case "Pharah":
+					document.getElementById("heroPic").src = "https://blzgdapipro-a.akamaihd.net/game/heroes/0x02E0000000000008.png";
+					break;
+				case "Bastion":
+					document.getElementById("heroPic").src = "https://blzgdapipro-a.akamaihd.net/game/heroes/0x02E0000000000015.png";
+					break;
+				case "Hanzo":
+					document.getElementById("heroPic").src = "https://blzgdapipro-a.akamaihd.net/game/heroes/0x02E0000000000005.png";
+					break;
+				case "Junkrat":
+					document.getElementById("heroPic").src = "https://blzgdapipro-a.akamaihd.net/game/heroes/0x02E0000000000065.png";
+					break;
+				case "Mei":
+					document.getElementById("heroPic").src = "https://blzgdapipro-a.akamaihd.net/game/heroes/0x02E00000000000DD.png";
+					break;
+				case "Torbjorn":
+					document.getElementById("heroPic").src = "https://blzgdapipro-a.akamaihd.net/game/heroes/0x02E0000000000006.png";
+					break;
+				case "Widowmaker":
+					document.getElementById("heroPic").src = "https://blzgdapipro-a.akamaihd.net/game/heroes/0x02E000000000000A.png";
+					break;
+				case "D.Va":
+					document.getElementById("heroPic").src = "https://blzgdapipro-a.akamaihd.net/game/heroes/0x02E000000000007A.png";
+					break;
+				case "Reinhardt":
+					document.getElementById("heroPic").src = "https://blzgdapipro-a.akamaihd.net/game/heroes/0x02E0000000000007.png";
+					break;
+				case "Roadhog":
+					document.getElementById("heroPic").src = "https://blzgdapipro-a.akamaihd.net/game/heroes/0x02E0000000000040.png";
+					break;
+				case "Winston":
+					document.getElementById("heroPic").src = "https://blzgdapipro-a.akamaihd.net/game/heroes/0x02E0000000000009.png";
+					break;
+				case "Zarya":
+					document.getElementById("heroPic").src = "https://blzgdapipro-a.akamaihd.net/game/heroes/0x02E0000000000068.png";
+					break;
+				case "Ana":
+					document.getElementById("heroPic").src = "https://blzgdapipro-a.akamaihd.net/game/heroes/0x02E000000000013B.png";
+					break;
+				case "Lucio":
+					document.getElementById("heroPic").src = "https://blzgdapipro-a.akamaihd.net/game/heroes/0x02E0000000000079.png";
+					break;
+				case "Mercy":
+					document.getElementById("heroPic").src = "https://blzgdapipro-a.akamaihd.net/game/heroes/0x02E0000000000004.png";
+					break;
+				case "Symmetra":
+					document.getElementById("heroPic").src = "https://blzgdapipro-a.akamaihd.net/game/heroes/0x02E0000000000016.png";
+					break;
+				case "Zenyatta":
+					document.getElementById("heroPic").src = "https://blzgdapipro-a.akamaihd.net/game/heroes/0x02E0000000000020.png";
+					break;
+				default:
+					break;
+			}
+			
 		} else {
 			alert("You must select at least one role!");
 		}
@@ -54,29 +126,32 @@
   </head>
   <body style="background-color:lightgrey">
   
-  <div class="container-fluid">
-    <h1>Overwatch Hero Randomizer</h1>
-	<div class="row">
+	<div class="container-fluid">
+		<h1>Overwatch Hero Randomizer</h1>
+		<div class="row">
 	  
-	  <div class="col-sm-4">
-		 <h4> Select the role(s) you would like to play:</h4> <br>
-		  <input type="checkbox" name="offense" id="offense"> Offense 
-		  <img src="https://hydra-media.cursecdn.com/overwatch.gamepedia.com/1/14/OffenseIcon.png" alt="offense" height="40" width="40"> <br>
-		  <input type="checkbox" name="defense" id="defense"> Defense
-		  <img src="https://hydra-media.cursecdn.com/overwatch.gamepedia.com/6/61/DefenseIcon.png" alt="defense" height="40" width="40"> <br>
-		  <input type="checkbox" name="tank" id="tank"> Tank
-		  <img src="https://hydra-media.cursecdn.com/overwatch.gamepedia.com/6/69/TankIcon.png" alt="tank" height="40" width="40"> <br>
-		  <input type="checkbox" name="support" id="support"> Support
-		  <img src="https://hydra-media.cursecdn.com/overwatch.gamepedia.com/5/5f/SupportIcon.png" alt="support" height="40" width="40"> <br>
-		  <button onclick="randomize()">Randomize!</button> 
-	  </div>
+			<div class="col-sm-4">
+				<h4> Select the role(s) you would like to play:</h4> <br>
+					<input type="checkbox" name="offense" id="offense"> Offense 
+					<img src="https://hydra-media.cursecdn.com/overwatch.gamepedia.com/1/14/OffenseIcon.png" alt="offense" height="40" width="40"> <br>
+					<input type="checkbox" name="defense" id="defense"> Defense
+					<img src="https://hydra-media.cursecdn.com/overwatch.gamepedia.com/6/61/DefenseIcon.png" alt="defense" height="40" width="40"> <br>
+					<input type="checkbox" name="tank" id="tank"> Tank
+					<img src="https://hydra-media.cursecdn.com/overwatch.gamepedia.com/6/69/TankIcon.png" alt="tank" height="40" width="40"> <br>
+					<input type="checkbox" name="support" id="support"> Support
+					<img src="https://hydra-media.cursecdn.com/overwatch.gamepedia.com/5/5f/SupportIcon.png" alt="support" height="40" width="40"> <br>
+					<button onclick="randomize()">Randomize!</button> 
+			</div>
 	 
-	 <div class="col-sm-8">
-	  <h4>You should play:</h4> <br>
-	  <h4 id="hero"> </h4> <br>
-	  <img name="pic" src="http://media-overpwn.cursecdn.com/attachments/1/774/000000007052.png" alt="overwatch" height="400" width="400">
-	 </div>
-	</div>
-  </div>  
+			<div class="col-sm-6">
+				<h2>You should play:</h2> <br>
+				<h4 id="hero"> </h4> <br>
+				<img id="heroPic" src="http://vignette4.wikia.nocookie.net/overwatch/images/b/bd/Overwatch_line_art_logo_symbol-only.png/revision/latest?cb=20141107210951 alt="overwatch">
+			</div>
+		
+			<div class="col-sm-2">
+			</div>
+		</div>
+	</div>  
   </body>
 </html>
