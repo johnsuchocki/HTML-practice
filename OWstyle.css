@@ -1,9 +1,17 @@
 body {
 	font-family: 'Play', sans-serif;
+	background-color: lightgrey;
 }
 
-.col-sm-4 {
+.role-selector {
 	font-size: 18px;
+	padding-left: 50px;
+	padding-top: 20px;
+}
+
+.links {
+	font-size: 18px;
+	padding-top: 20px;
 }
 
 #hero {
