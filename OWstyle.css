@@ -5,15 +5,16 @@ body {
 
 .footer {
 	font-family: 'Play', sans-serif;
-	font-size: 12px;
+	font-size: 14px;
 	position: fixed;
     bottom: 0;
     right: 0;
+	z-index: -1;
 }
 
 .role-selector {
 	font-size: 18px;
-	padding-left: 50px;
+	padding-left: 40px;
 	padding-top: 20px;
 }
 
